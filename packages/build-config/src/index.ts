@@ -1,2 +1,2 @@
 export {buildWebpack} from './buildWebpack'
-export type {BuildMode, BuildPaths, BuildPlatform, BuildOptions} from './types/types'
+export type { BuildMode, BuildPaths, BuildOptions, BuildPlatform } from './types/types'

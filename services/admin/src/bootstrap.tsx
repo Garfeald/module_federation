@@ -1,6 +1,7 @@
 import {createRoot} from "react-dom/client";
-import {RouterProvider} from "react-router-dom";
-import { router } from "@/router/Router";
+import { RouterProvider} from "react-router-dom";
+
+import {router} from "@/router/Router";
 
 const root = document.getElementById('root')
 
