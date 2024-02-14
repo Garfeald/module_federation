@@ -1,6 +1,12 @@
 {
   "name": "modude-federation",
   "version": "1.0.0",
+  "scripts": {
+    "shop" : "npm run start --prefix services/shop",
+    "admin" : "npm run start --prefix services/admin",
+    "host" : "npm run start --prefix services/host",
+    "start": "concurrently \"npm run shop\" \"npm run admin\" \"npm run host\""
+  },
   "workspaces": [
     "packages/*",
     "services/*"

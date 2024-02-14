@@ -27,28 +27,28 @@ export default (env: EnvVariables) => {
         platform: env.platform ?? 'desktop'
     })
 
-    // config.plugins.push(new webpack.container.ModuleFederationPlugin({
-    //     name: 'shop',
-    //     filename: 'remoteEntry.js',
-    //     exposes: {
-    //         './Router': './src/router/Router.tsx',
-    //     },
-    //     shared: {
-    //         ...packageJson.dependencies,
-    //         react: {
-    //             eager: true,
-    //             // requiredVersion: packageJson.dependencies['react'],
-    //         },
-    //         'react-router-dom': {
-    //             eager: true,
-    //             // requiredVersion: packageJson.dependencies['react-router-dom'],
-    //         },
-    //         'react-dom': {
-    //             eager: true,
-    //             // requiredVersion: packageJson.dependencies['react-dom'],
-    //         },
-    //     },
-    // }))
+    config.plugins.push(new webpack.container.ModuleFederationPlugin({
+        name: 'shop',
+        filename: 'remoteEntry.js',
+        exposes: {
+            './Router': './src/router/Router.tsx',
+        },
+        shared: {
+            ...packageJson.dependencies,
+            react: {
+                eager: true,
+                requiredVersion: packageJson.dependencies['react'],
+            },
+            'react-router-dom': {
+                eager: true,
+                requiredVersion: packageJson.dependencies['react-router-dom'],
+            },
+            'react-dom': {
+                eager: true,
+                requiredVersion: packageJson.dependencies['react-dom'],
+            },
+        },
+    }))
 
     return config;
 }

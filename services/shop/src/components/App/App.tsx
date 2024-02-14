@@ -7,7 +7,7 @@ export const App = () => {
 
     return (
         <div>
-            <h1>SHOPY SHOP X!!</h1>
+            <h1>SHOPY SHOP X!!!!!!!</h1>
             <Outlet/>
         </div>
     );
